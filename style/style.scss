@@ -19,6 +19,26 @@ $col2: #d4c17f;
 }
 //------------FIRST BLOCK-------------------
 .first__block {
+  .navbar-brand img:hover {
+    box-shadow: 0 0 10px $col2;
+  }
+  .nav-item a:hover {
+    border-bottom: 2px solid $col2;
+    color: #d4c17f;
+  }
+  .left__text {
+    @include font("Raleway", 400, 14px, 16px, $col1);
+    margin-top: 15px;
+  }
+  .nav-link {
+    @include font("Raleway", 400, 14px, 16px, $col1);
+  }
+  li:not(:last-child) {
+    margin-right: 40px;
+  }
+  .bg-light {
+    border-radius: 30%;
+  }
   height: 840px;
   background: url(../img/main-bg.svg) center / cover no-repeat;
   .header {
@@ -70,9 +90,7 @@ $col2: #d4c17f;
     text-decoration: underline $col2;
     color: #d4c17f;
   }
-  .left__logo:hover {
-    box-shadow: 0 0 10px $col2;
-  }
+
   .header__item:hover {
     border-bottom: 2px solid $col2;
     color: #d4c17f;

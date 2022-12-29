@@ -10,6 +10,34 @@
   height: 840px;
   background: url(../img/main-bg.svg) center/cover no-repeat;
 }
+.first__block .navbar-brand img:hover {
+  box-shadow: 0 0 10px #d4c17f;
+}
+.first__block .nav-item a:hover {
+  border-bottom: 2px solid #d4c17f;
+  color: #d4c17f;
+}
+.first__block .left__text {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  margin-top: 15px;
+}
+.first__block .nav-link {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+}
+.first__block li:not(:last-child) {
+  margin-right: 40px;
+}
+.first__block .bg-light {
+  border-radius: 30%;
+}
 .first__block .header {
   font-family: "Raleway";
   font-weight: 400;
@@ -70,9 +98,6 @@
   -webkit-text-decoration: underline #d4c17f;
           text-decoration: underline #d4c17f;
   color: #d4c17f;
-}
-.first__block .left__logo:hover {
-  box-shadow: 0 0 10px #d4c17f;
 }
 .first__block .header__item:hover {
   border-bottom: 2px solid #d4c17f;
