@@ -47,4 +47,15 @@
   .first__block .nav-item {
     margin: 0;
   }
+  .first__block .right {
+    font-size: 20px;
+  }
+  .first__block .right * {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    justify-content: end;
+  }
 }

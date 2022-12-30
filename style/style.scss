@@ -17,6 +17,31 @@ $col2: #d4c17f;
 }
 //------------FIRST BLOCK-------------------
 .first__block {
+  .header {
+    display: flex;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    @include font("Raleway", 400, 14px, 16px, $col1);
+    .left {
+    }
+    .left-logo-header:hover {
+      box-shadow: 2px 2px 10px #d4c17f;
+    }
+    .left-text-header {
+      padding-top: 10px;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+    }
+    .nav-item:hover {
+      border-bottom: 2px solid #d4c17f;
+      color: #d4c17f;
+    }
+  }
+
   .navbar-brand img:hover {
     box-shadow: 0 0 10px $col2;
   }
