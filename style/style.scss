@@ -98,7 +98,7 @@ $col2: #d4c17f;
     padding: 0 10px;
   }
   .flex p {
-    margin-top: 53px;
+    margin-top: calc(40px + 0.3vh);
     @include font("Roboto", 300, calc(10px + 0.5vw), 27px, $col1);
   }
 }
@@ -211,8 +211,9 @@ $col2: #d4c17f;
     padding: 0;
     text-align: center;
   }
-  .inputs input[type="text"] {
-    padding: 1.5% 0%;
+  .inputs input[type="text"],
+  & input[type="number"] {
+    padding: 1.5% 2%;
     margin-bottom: calc((46px / 535px) * 100%);
     background: #ffffff;
     opacity: 0.2;
@@ -302,14 +303,15 @@ $col2: #d4c17f;
     }
     & input {
       flex: 0 1 23%;
-      padding: 13px 0px;
+      padding: 13px 5%;
     }
     & input[type="submit"] {
       background: #d4c17f;
       color: #ffffff;
       border: none;
     }
-    & input[type="text"] {
+    & input[type="text"],
+    & input[type="number"] {
       background: #ffffff;
       opacity: 0.2;
       color: black;

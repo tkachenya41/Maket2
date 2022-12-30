@@ -102,7 +102,7 @@
   padding: 0 10px;
 }
 .second__block .flex p {
-  margin-top: 53px;
+  margin-top: calc(40px + 0.3vh);
   font-family: "Roboto";
   font-weight: 300;
   font-size: calc(10px + 0.5vw);
@@ -228,8 +228,8 @@
   padding: 0;
   text-align: center;
 }
-.city .inputs input[type=text] {
-  padding: 1.5% 0%;
+.city .inputs input[type=text], .city input[type=number] {
+  padding: 1.5% 2%;
   margin-bottom: 8.5981308411%;
   background: #ffffff;
   opacity: 0.2;
@@ -325,14 +325,14 @@
 }
 .questions .inputs input {
   flex: 0 1 23%;
-  padding: 13px 0px;
+  padding: 13px 5%;
 }
 .questions .inputs input[type=submit] {
   background: #d4c17f;
   color: #ffffff;
   border: none;
 }
-.questions .inputs input[type=text] {
+.questions .inputs input[type=text], .questions .inputs input[type=number] {
   background: #ffffff;
   opacity: 0.2;
   color: black;
