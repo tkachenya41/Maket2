@@ -2,8 +2,6 @@
 //-----------ПЕРЕМЕННЫЕ---------------------------
 $col1: white;
 $col2: #d4c17f;
-//------------ШАБЛОНЫ--------------------------
-
 //------------МИКСИНЫ--------------------------
 @mixin font($ff, $fw, $fs, $ln, $c) {
   font-family: $ff;
@@ -33,53 +31,42 @@ $col2: #d4c17f;
   .nav-link {
     @include font("Raleway", 400, 14px, 16px, $col1);
   }
-  li:not(:last-child) {
+  li {
     margin-right: 40px;
   }
   .bg-light {
     border-radius: 30%;
   }
-  height: 840px;
   background: url(../img/main-bg.svg) center / cover no-repeat;
-  .header {
-    @include font("Raleway", 400, 14px, 16px, $col1);
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-  }
-  .header-left {
-    margin-top: calc((30px / 1115px) * 100%);
-  }
-  .left__logo {
-    margin-bottom: calc((15px / 137px) * 100%);
-  }
-  .header__right {
-    display: flex;
-    margin-top: calc((55px / 1115px) * 100%);
-  }
-  .header__item:not(:last-child) {
-    margin-right: 40px;
-  }
   .first__content {
     max-width: 582px;
     margin: 200px auto 0 auto;
     background: url(../img/mouse.svg) center no-repeat;
   }
   .first__content-header {
-    @include font("Playfair Display", 700, 48px, 64px, $col2);
+    @include font(
+      "Playfair Display",
+      700,
+      calc(30px + 0.5vw),
+      calc(35px + 0.5vw),
+      $col2
+    );
     text-align: center;
     max-width: 556px;
-
     margin: 0 auto 340px auto;
+    & p {
+      margin-bottom: 0;
+    }
   }
   .first__contacts {
     display: flex;
-    @include font("Raleway", 400, 18px, 21px, $col1);
+    justify-content: center;
+    @include font("Raleway", 400, calc(8px + 0.6vw), 21px, $col1);
   }
   .first__contact1 {
     background: url(../img/location.svg) left center no-repeat;
     padding: 5px 0 5px 25px;
-    margin-right: 100px;
+    margin-right: calc((100px / 556px) * 100%);
   }
   .first__contact2 {
     background: url(../img/phone.svg) left center no-repeat;
@@ -90,7 +77,6 @@ $col2: #d4c17f;
     text-decoration: underline $col2;
     color: #d4c17f;
   }
-
   .header__item:hover {
     border-bottom: 2px solid $col2;
     color: #d4c17f;
@@ -102,22 +88,31 @@ $col2: #d4c17f;
 .second__block {
   display: flex;
   justify-content: center;
-  padding-top: calc((120px / 1920px) * 100%);
+  flex-wrap: wrap;
+  padding-top: calc((190px / 1920px) * 100%);
   .flex {
-    max-width: 193px;
+    width: 20%;
+    min-width: 140px;
     text-align: center;
     align-items: center;
-    @include font("Roboto", 300, 20px, 27px, $col1);
+    padding: 0 10px;
   }
   .flex p {
     margin-top: 53px;
+    @include font("Roboto", 300, calc(10px + 0.5vw), 27px, $col1);
   }
 }
 .third__block {
   .headers {
     margin: calc((120px / 1115px) * 100%) auto calc((100px / 1115px) * 100%)
       auto;
-    @include font("Playfair Display", 700, 36px, 48px, $col2);
+    @include font(
+      "Playfair Display",
+      700,
+      calc(20px + 1vw),
+      calc(25px + 1vw),
+      $col2
+    );
   }
   .lofts {
     display: flex;
@@ -155,14 +150,13 @@ $col2: #d4c17f;
     top: 50%;
     display: flex;
     justify-content: center;
-    @include font("Raleway", 400, 28px, 35px, $col1);
+    @include font("Raleway", 400, calc(8px + 1vw), calc(11px + 1vw), $col1);
     text-decoration: underline;
   }
   .loft:hover .loft-content,
   .loft2:hover .loft-content {
     opacity: 1;
   }
-
   .loft,
   .loft2 {
     position: relative;
@@ -170,9 +164,9 @@ $col2: #d4c17f;
   .loft::after,
   .loft2::after {
     position: absolute;
-    left: 50px;
-    bottom: 50px;
-    @include font("Raleway", 400, 24px, 28px, $col1);
+    left: 10%;
+    bottom: 15%;
+    @include font("Raleway", 400, calc(8px + 1vw), 28px, $col1);
   }
   .loft::after {
     content: "Лофт — 3 этажа";
@@ -182,6 +176,7 @@ $col2: #d4c17f;
   }
 }
 .city {
+  box-sizing: border-box;
   background: url(../img/city.svg) 0 0 / cover no-repeat;
   .city-all {
     display: flex;
@@ -189,33 +184,38 @@ $col2: #d4c17f;
       20px;
   }
   .city__content {
-    max-width: 535px;
+    max-width: 50%;
   }
   .headers {
-    @include font("Playfair Display", 700, 36px, 48px, $col2);
+    @include font(
+      "Playfair Display",
+      700,
+      calc(20px + 1vw),
+      calc(25px + 1vw),
+      $col2
+    );
   }
   .city__text {
     margin-top: calc((50px / 535px) * 100%);
     margin-right: calc((25px / 535px) * 100%);
-    @include font("Raleway", 400, 16px, 24px, $col1);
+    @include font("Raleway", 400, calc(8px + 0.5vw), 24px, $col1);
   }
   .inputs {
-    padding-top: 70px;
+    p {
+      margin: 0;
+    }
     display: flex;
-    max-width: 540px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
   }
   .inputs input {
-    width: 47%;
-    padding: 13px 0px;
+    @include font("Raleway", 400, calc(7px + 0.3vw), 16px, $col1);
+    padding: 0;
     text-align: center;
   }
   .inputs input[type="text"] {
+    padding: 1.5% 0%;
+    margin-bottom: calc((46px / 535px) * 100%);
     background: #ffffff;
     opacity: 0.2;
-
     color: black;
   }
   .inputs input[type="submit"] {
@@ -227,26 +227,47 @@ $col2: #d4c17f;
     opacity: 0.5;
   }
   .input-text {
-    @include font("Raleway", 400, 13px, 16px, $col1);
-    width: 47%;
+    @include font("Raleway", 400, calc(7px + 0.1vw), 16px, $col1);
+    max-width: 255px;
     text-align: center;
   }
+  .inputss {
+    justify-content: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .inputs {
+    justify-content: space-between;
+  }
+  .inputs input {
+    width: 47%;
+  }
+  .input-text {
+    width: 47%;
+  }
 }
-
 .video {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 650px;
-  background: url(../img/vid.svg) center center / contain no-repeat;
-  & img:hover {
+  padding-bottom: calc((550px / 1115px) * 100%);
+  background: url(../img/play-button.svg) center center / 10% no-repeat,
+    url(../img/vid.svg) center center / contain no-repeat;
+  &:hover {
     opacity: 0.5;
   }
 }
 .map {
   padding: calc((180px / 1920px) * 100%) 20px calc((180px / 1920px) * 100%) 20px;
   & .headers {
-    @include font("Playfair Display", 700, 36px, 48px, $col2);
+    @include font(
+      "Playfair Display",
+      700,
+      calc(20px + 1vw),
+      calc(25px + 1vw),
+      $col2
+    );
     padding-bottom: calc((100px / 1920px) * 100%);
   }
   & img {
@@ -257,16 +278,30 @@ $col2: #d4c17f;
   padding-bottom: calc((191px / 1920px) * 100%);
   & .headers {
     padding-bottom: calc((61px / 1920px) * 100%);
-    @include font("Playfair Display", 700, 36px, 48px, $col2);
+    @include font(
+      "Playfair Display",
+      700,
+      calc(20px + 1vw),
+      calc(25px + 1vw),
+      $col2
+    );
   }
   .inputs {
     display: flex;
     justify-content: space-between;
     & * {
-      width: 23%;
+      @include font("Raleway", 400, calc(7px + 0.3vw), 16px, $col1);
+
       text-align: center;
     }
+    p {
+      margin: 0;
+    }
+    & .input-text {
+      flex: 0 1 23%;
+    }
     & input {
+      flex: 0 1 23%;
       padding: 13px 0px;
     }
     & input[type="submit"] {
@@ -279,9 +314,7 @@ $col2: #d4c17f;
       opacity: 0.2;
       color: black;
     }
-    & .input-text {
-      @include font("Raleway", 400, 13px, 16px, $col1);
-    }
+
     & input[type="submit"]:hover {
       opacity: 0.8;
     }
@@ -289,15 +322,14 @@ $col2: #d4c17f;
 }
 .footer {
   width: 100%;
-
   background: url(../img/Rectangle\ 4.svg) 0 0 / cover no-repeat;
   @include font("Raleway", 400, 14px, 16px, $col1);
-
   & ._container {
     padding-top: calc((65px / 1920px) * 100%);
     padding-bottom: 30px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     & * {
       margin-bottom: 15px;
     }
@@ -324,4 +356,14 @@ $col2: #d4c17f;
   .first__contact5 *:hover {
     opacity: 0.2;
   }
+  .left,
+  .header__right,
+  .first__contacts {
+    padding: 0 10px;
+  }
+}
+.hz {
+  background-color: #242b33;
+  display: flex;
+  justify-content: end;
 }

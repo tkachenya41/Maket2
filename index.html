@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/media.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -28,7 +29,7 @@
   <body>
     <section class="first__block">
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid _container">
+        <div class="container-fluid _container bg-transparent">
           <a class="navbar-brand" href="#">
             <img src="./img/logo.svg" alt="" class="left-logo" />
             <p class="left__text">ЖИЛОЙ КОМПЛЕКС</p>
@@ -44,10 +45,7 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarSupportedContent"
-          >
+          <div class="collapse navbar-collapse hz" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="#">О комплексе</a>
@@ -82,19 +80,19 @@
     <div class="block">
       <section class="second__block _container">
         <div class="flex">
-          <img src="./img/bench.svg" alt="" />
+          <img src="./img/bench.svg" alt="" class="flex-img" />
           <p>Рядом исторические парки и скверы</p>
         </div>
         <div class="flex">
-          <img src="./img/building.svg" alt="" />
+          <img src="./img/building.svg" alt="" class="flex-img" />
           <p>Полностью обустроенный</p>
         </div>
         <div class="flex">
-          <img src="./img/fountain.svg" alt="" />
+          <img src="./img/fountain.svg" alt="" class="flex-img" />
           <p>10 фонтанов на территории</p>
         </div>
         <div class="flex">
-          <img src="./img/bicycle.svg" alt="" />
+          <img src="./img/bicycle.svg" alt="" class="flex-img" />
           <p>6 км велодорожек</p>
         </div>
       </section>
@@ -139,20 +137,22 @@
               используя Lorem Ipsum для распечатки образцов.
             </p>
           </div>
-          <div class="inputs">
-            <input type="text" placeholder="Ваше имя" />
-            <input type="text" placeholder="Ваш телефон " />
-            <p class="input-text">
-              *Мы никому не передаем ваши данные. И не сохраняем ваш номер в
-              базу.
-            </p>
-            <input type="submit" value="Посмотреть район" />
+          <div class="inputss">
+            <div class="inputs">
+              <input type="text" placeholder="Ваше имя" />
+              <input type="text" placeholder="Ваш телефон " />
+            </div>
+            <div class="inputs">
+              <p class="input-text">
+                *Мы никому не передаем ваши данные. И не сохраняем ваш номер в
+                базу.
+              </p>
+              <input type="submit" value="Посмотреть район" />
+            </div>
           </div>
         </div>
       </section>
-      <section class="video _container">
-        <img src="./img/play-button.svg" alt="" />
-      </section>
+      <section class="video _container"></section>
       <section class="map _container">
         <p class="headers">Район на карте</p>
         <img src="./img/Rectangle 3.svg" alt="" />
@@ -204,19 +204,6 @@
       </footer>
     </div>
 
-    <header class="header _container">
-      <div class="header-left">
-        <img src="./img/logo.svg" alt="" class="left__logo" />
-        <p class="left__text">ЖИЛОЙ КОМПЛЕКС</p>
-      </div>
-      <ul class="header__right">
-        <li class="header__item">О комплексе</li>
-        <li class="header__item">Район</li>
-        <li class="header__item">Каталог квартир</li>
-        <li class="header__item">Ипотека</li>
-        <li class="header__item">Контакты</li>
-      </ul>
-    </header>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
